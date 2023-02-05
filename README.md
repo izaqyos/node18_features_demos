@@ -1,6 +1,19 @@
 # node18_features_demos
 NodeJS version 18 features demonstrated
 
+## Recap major NodeJS 16 features 
+## Platform support (apples M1)                                                                                                                                                                         
+## V8 Ver 9
+### RegExp match indices
+### Faster Super
+### WebAssembly
+### Promise based timers
+### AbortController/Signal
+### WebCrypto
+### Note, End of security support Node 14. 30.4.2023
+## ES 2021 support
+## base64 utility methods
+
 ## Fetch API arrives to Node
 fetch finally arrives to NodeJS bringing uniformity with browsers
 code example:
