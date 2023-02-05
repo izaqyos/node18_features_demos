@@ -2,17 +2,17 @@
 NodeJS version 18 features demonstrated
 
 ## Recap major NodeJS 16 features 
-## Platform support (apples M1)                                                                                                                                                                         
-## V8 Ver 9
-### RegExp match indices
-### Faster Super
-### WebAssembly
-### Promise based timers
-### AbortController/Signal
-### WebCrypto
-### Note, End of security support Node 14. 30.4.2023
-## ES 2021 support
-## base64 utility methods
+### Platform support (apples M1)                                                                                                                                                                         
+### V8 Ver 9
+#### RegExp match indices
+#### Faster Super
+#### WebAssembly
+#### Promise based timers
+#### AbortController/Signal
+#### WebCrypto
+#### Note, End of security support Node 14. 30.4.2023
+### ES 2021 support
+### base64 utility methods
 
 ## Fetch API arrives to Node
 fetch finally arrives to NodeJS bringing uniformity with browsers
@@ -454,4 +454,14 @@ return true;
 
 
 
+## V8 improvements  
+###performance improvements:
+class fields and private class methods
+
+### findLast and findLastIndex methods on arrays
+
+### locale improvements
+Intl.Locale (https://v8.dev/blog/v8-release-74#intl.locale) improvments (https://v8.dev/blog/v8-release-99#intl.locale-extensions)
+  added properties calendars, collations, hourCycles, numberingSystems, timeZones, textInfo, and weekInfo.
+Intl supportedValuesOf (https://v8.dev/blog/v8-release-99#intl-enumeration) 
 
