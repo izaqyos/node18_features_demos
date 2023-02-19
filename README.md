@@ -1,21 +1,34 @@
-# node18_features_demos
+# node18 features with demos
 NodeJS version 18 features demonstrated
 
-## Recap major NodeJS 16 features 
-### Platform support (apples M1)                                                                                                                                                                         
-### V8 Ver 9
-#### RegExp match indices
-#### Faster Super
-#### WebAssembly
-#### Promise based timers
-#### AbortController/Signal
-#### WebCrypto
-#### Note, End of security support Node 14. 30.4.2023
-### ES 2021 support
-### base64 utility methods
+*Note, End of security support Node 14. 30.4.2023*
 
-## Fetch API arrives to Node
+# Recap major NodeJS 16 features 
+## Platform support (apples M1)                                                                                                                                                                         
+## V8 Ver 9
+### RegExp match indices
+### Faster Super
+### WebAssembly
+### Promise based timers
+### AbortController/Signal
+### WebCrypto
+## ES 2021 support
+## base64 utility methods
+
+# Background
+Node.js major release is updated every six months. The new release becomes the Current release for six months, which gives library authors time to add support for them.
+After six months, odd-numbered releases, such as 17, become unsupported, and even-numbered releases, such as 16, move to the Active LTS (long-term support) status and are ready for general use. LTS release typically guarantees that critical bugs will be fixed for a total of 30 months. Production applications should only use Active LTS or Maintenance LTS releases.
+Node.js 18 was released on April 19, 2022. It becomes the Current release. It comes with 5 major features:
+* Experimental fetch API
+* Web Streams API
+* HTTP Timeouts
+* Experimental test runner
+* V8 JavaScript engine is updated to V8 10.1
+
+
+# Fetch API arrives to Node
 fetch finally arrives to NodeJS bringing uniformity with browsers
+
 code example:
 ``` bash
 [i500695@WYLQRXL9LQ:2023-01-29 17:37:23:~/work/code/nodejs/node18:]2085$ cat fetch.js
@@ -163,7 +176,7 @@ getJsonFromUrl(url);
 ```
 
 #### Code explanation
-  define the function arrow syntax: const getJsonFromUrl= (url)  => {
+- use function arrow syntax: const getJsonFromUrl= (url)  => {
 - call fetch: fetch(url).then( (resp) => {} which returns a promise which returns the response
 - returns the response.body promise
   return resp.body;
