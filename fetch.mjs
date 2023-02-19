@@ -16,6 +16,6 @@ export async function getJsonFromUrl(url){
 }
 
 
-//getJsonFromUrl(url);
+getJsonFromUrl(url);
 // module.exports={ getJsonFromUrl};
 

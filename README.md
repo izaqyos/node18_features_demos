@@ -468,13 +468,71 @@ return true;
 
 
 ## V8 improvements  
-###performance improvements:
-class fields and private class methods
+### performance improvements:
+For class fields and private class methods
 
 ### findLast and findLastIndex methods on arrays
+``` javascript 
+console.log('Array findLast and findLastIndex...');
+const myArray = [
+    {val: 1 },
+    {val: 2 },
+    {val: 3 },
+    {val: 4 },
+    {val: 5 },
+    {val: 6 },
+    {val: 7 },
+    {val: 8 },
+    {val: 9 },
+    {val: 10},
+    {val: 11},
+];
+
+console.log(`Find element divisible by 5 ${JSON.stringify(myArray.find( elem => elem.val %5 == 0))}`);
+console.log(`Find last element divisible by 5 ${JSON.stringify(myArray.findLast( elem => elem.val %5 == 0))}`);
+console.log(`Find index of element divisible by 5 ${myArray.findIndex( elem => elem.val %5 == 0)}`);
+console.log(`Find index of last element divisible by 5 ${myArray.findLastIndex( elem => elem.val %5 == 0)}`);
+console.log('--------------------------------------------------------------------------------');
+```
 
 ### locale improvements
 Intl.Locale (https://v8.dev/blog/v8-release-74#intl.locale) improvments (https://v8.dev/blog/v8-release-99#intl.locale-extensions)
   added properties calendars, collations, hourCycles, numberingSystems, timeZones, textInfo, and weekInfo.
 Intl supportedValuesOf (https://v8.dev/blog/v8-release-99#intl-enumeration) 
+code example:
+```javascript
+function printIntlLocaleDetails(localeStr) {
+    console.log('Printing locale', localeStr);
+    try {
+        const locale= new Intl.Locale(localeStr);
+        console.log(`${locale} details:`);
+        console.log(`locale calendar: ${locale.calendars}, collations: ${locale.collations}, hourCycles: ${locale.hourCycles}, numberingSystems: ${locale.numberingSystems}, writing direction: ${JSON.stringify(locale.textInfo)}, week info: ${JSON.stringify(locale.weekInfo)}`);
+        console.log('locale timeZones', locale.timeZones);
+    }
+    catch (err) {
+        console.log(`cant init locale due to error ${err.name} ${err.message}`);
+    }
+}
+
+```
+
+```javascript
+console.log('Locale improvements. get array of supported values in V8 for Intl APIs using Intl.supportedValuesOf(code). code can be calander, collation, currency, numberingSystems, timeZone etc');
+console.log(Intl.supportedValuesOf('calendar'));
+await setTimeout(1000);
+console.log('--------------------------------------------------------------------------------');
+console.log(Intl.supportedValuesOf('collation'));
+await setTimeout(1000);
+console.log('--------------------------------------------------------------------------------');
+console.log(Intl.supportedValuesOf('currency'));
+await setTimeout(1000);
+console.log('--------------------------------------------------------------------------------');
+console.log(Intl.supportedValuesOf('numberingSystem'));
+await setTimeout(1000);
+console.log('--------------------------------------------------------------------------------');
+console.log(Intl.supportedValuesOf('timeZone'));
+await setTimeout(1000);
+```
+
+
 
